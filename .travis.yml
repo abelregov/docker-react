@@ -8,5 +8,5 @@ before_install:
   - docker build -t abelregov/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true abelregov/docker-react npm run test
-  # - docker run -e CI=true USERNAME/docker-react npm run test
+  - docker run -e CI=true abelregov/docker-react yarn run test
+  # - docker run -e CI=true USERNAME/docker-react yarn run test
