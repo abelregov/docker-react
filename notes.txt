@@ -1,2 +1,8 @@
 web: 
   stdin_open: true
+
+The code will now look like this:
+
+AWS IAM: search for IAM and get the credentials 
+access_key_id: $AWS_ACCESS_KEY
+secret_access_key: $AWS_SECRET_KEY

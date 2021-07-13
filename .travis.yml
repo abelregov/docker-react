@@ -10,3 +10,16 @@ before_install:
 script:
   - docker run -e CI=true abelregov/docker-react yarn run test
   # - docker run -e CI=true USERNAME/docker-react yarn run test
+
+deploy:
+  provider: elasticbeanstack
+  # provider: digitaloceans
+  region: "us-west-2"
+  name: "docker-react"
+  env: "Docker-env"
+  bucket_name: "s3 instance bucket name"
+  bucket_path: "docker-react"
+  on: 
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
